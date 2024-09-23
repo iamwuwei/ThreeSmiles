@@ -17,6 +17,9 @@
 		1CBA62522CA1F0B6006253AE /* ThreeSmilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA62512CA1F0B6006253AE /* ThreeSmilesTests.swift */; };
 		1CBA625C2CA1F0B6006253AE /* ThreeSmilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA625B2CA1F0B6006253AE /* ThreeSmilesUITests.swift */; };
 		1CBA625E2CA1F0B6006253AE /* ThreeSmilesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA625D2CA1F0B6006253AE /* ThreeSmilesUITestsLaunchTests.swift */; };
+		1CBA626B2CA1F5C5006253AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA626A2CA1F5C5006253AE /* GoogleService-Info.plist */; };
+		1CBA62732CA1F7F6006253AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1CBA62722CA1F7F6006253AE /* FirebaseAnalytics */; };
+		1CBA62752CA1F7FA006253AE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1CBA62742CA1F7FA006253AE /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 		1CBA62572CA1F0B6006253AE /* ThreeSmilesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeSmilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBA625B2CA1F0B6006253AE /* ThreeSmilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSmilesUITests.swift; sourceTree = "<group>"; };
 		1CBA625D2CA1F0B6006253AE /* ThreeSmilesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSmilesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1CBA626A2CA1F5C5006253AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBA62732CA1F7F6006253AE /* FirebaseAnalytics in Frameworks */,
+				1CBA62752CA1F7FA006253AE /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				1CBA62502CA1F0B6006253AE /* ThreeSmilesTests */,
 				1CBA625A2CA1F0B6006253AE /* ThreeSmilesUITests */,
 				1CBA62352CA1F0B3006253AE /* Products */,
+				1CBA62712CA1F7F6006253AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +108,7 @@
 		1CBA62362CA1F0B3006253AE /* ThreeSmiles */ = {
 			isa = PBXGroup;
 			children = (
+				1CBA626A2CA1F5C5006253AE /* GoogleService-Info.plist */,
 				1CBA62372CA1F0B3006253AE /* AppDelegate.swift */,
 				1CBA62392CA1F0B3006253AE /* SceneDelegate.swift */,
 				1CBA623B2CA1F0B3006253AE /* ViewController.swift */,
@@ -130,6 +138,13 @@
 			path = ThreeSmilesUITests;
 			sourceTree = "<group>";
 		};
+		1CBA62712CA1F7F6006253AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +161,10 @@
 			dependencies = (
 			);
 			name = ThreeSmiles;
+			packageProductDependencies = (
+				1CBA62722CA1F7F6006253AE /* FirebaseAnalytics */,
+				1CBA62742CA1F7FA006253AE /* FirebaseCrashlytics */,
+			);
 			productName = ThreeSmiles;
 			productReference = 1CBA62342CA1F0B3006253AE /* ThreeSmiles.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 1CBA622B2CA1F0B3006253AE;
+			packageReferences = (
+				1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 1CBA62352CA1F0B3006253AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CBA62442CA1F0B6006253AE /* Assets.xcassets in Resources */,
+				1CBA626B2CA1F5C5006253AE /* GoogleService-Info.plist in Resources */,
 				1CBA62472CA1F0B6006253AE /* Base in Resources */,
 				1CBA623F2CA1F0B3006253AE /* Base in Resources */,
 			);
@@ -611,6 +634,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CBA62722CA1F7F6006253AE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		1CBA62742CA1F7FA006253AE /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1CBA62402CA1F0B3006253AE /* ThreeSmiles.xcdatamodeld */ = {
