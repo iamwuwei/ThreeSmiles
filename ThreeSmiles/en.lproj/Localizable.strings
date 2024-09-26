@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ThreeSmiles
+
+  Created by Wei Wu on 2024/09/27.
+  
+*/
+
+// Login page
+"demo" = "Demo";
+"login" = "Login";
+
