@@ -9,3 +9,6 @@
 // Login page
 "demo" = "試用";
 "login" = "登入";
+"signInWithEmail" = "使用信箱登入";
+"signInWithGoogle" = "使用Google登入";
+"signInWithApple" = "使用Apple登入";

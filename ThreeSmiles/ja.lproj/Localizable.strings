@@ -9,3 +9,6 @@
 // Login page
 "demo" = "デモ";
 "login" = "ログイン";
+"signInWithEmail" = "Emailでログイン";
+"signInWithGoogle" = "Googleでログイン";
+"signInWithApple" = "Appleでログイン";

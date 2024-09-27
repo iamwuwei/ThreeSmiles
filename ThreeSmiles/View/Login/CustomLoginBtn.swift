@@ -11,13 +11,14 @@ import UIKit
 enum LoginType {
     case login
     case demo
+    case email
     case google
     case apple
 }
 
 @IBDesignable
 class CustomLoginBtn: UIButton {
-    let standardHeight: CGFloat = 50
+    let standardHeight: CGFloat = 40
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +31,7 @@ class CustomLoginBtn: UIButton {
     }
 
     private func setupButton() {
-        layer.cornerRadius = 10
+        layer.cornerRadius = 20
         heightAnchor.constraint(equalToConstant: standardHeight).isActive = true
         titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         setTitleColor(.white, for: .normal)
@@ -39,9 +40,14 @@ class CustomLoginBtn: UIButton {
     func setLoginType(_ type: LoginType) {
         switch type {
         case .google:
-            setTitle("Google", for: .normal)
+            setTitle(NSLocalizedString("signInWithGoogle", comment: "signInWithGoogle"), for: .normal)
+            backgroundColor = Colors.primaryBtn
         case .apple:
-            setTitle("Apple", for: .normal)
+            setTitle(NSLocalizedString("signInWithApple", comment: "signInWithApple"), for: .normal)
+            backgroundColor = Colors.primaryBtn
+        case .email:
+            setTitle(NSLocalizedString("signInWithEmail", comment: "signInWithEmail"), for: .normal)
+            backgroundColor = Colors.primaryBtn
         case .login:
             setTitle(NSLocalizedString("login", comment: "login button title"), for: .normal)
             backgroundColor = Colors.primaryBtn

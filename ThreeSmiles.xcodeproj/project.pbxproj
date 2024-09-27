@@ -17,12 +17,13 @@
 		1CBA62522CA1F0B6006253AE /* ThreeSmilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA62512CA1F0B6006253AE /* ThreeSmilesTests.swift */; };
 		1CBA625C2CA1F0B6006253AE /* ThreeSmilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA625B2CA1F0B6006253AE /* ThreeSmilesUITests.swift */; };
 		1CBA625E2CA1F0B6006253AE /* ThreeSmilesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA625D2CA1F0B6006253AE /* ThreeSmilesUITestsLaunchTests.swift */; };
-		1CBA626B2CA1F5C5006253AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA626A2CA1F5C5006253AE /* GoogleService-Info.plist */; };
 		1CBA62732CA1F7F6006253AE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1CBA62722CA1F7F6006253AE /* FirebaseAnalytics */; };
 		1CBA62752CA1F7FA006253AE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1CBA62742CA1F7FA006253AE /* FirebaseCrashlytics */; };
 		1CBA627B2CA5BE05006253AE /* CustomLoginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA627A2CA5BE05006253AE /* CustomLoginBtn.swift */; };
 		1CBA627D2CA5C948006253AE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA627C2CA5C947006253AE /* Color.swift */; };
 		1CBA62882CA5CCAE006253AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA62862CA5CCAE006253AE /* Localizable.strings */; };
+		1CBA628C2CA5D69E006253AE /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA628B2CA5D69E006253AE /* LoginBottomSheetViewController.swift */; };
+		1CBA62902CA714DB006253AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA628F2CA714DB006253AE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,6 @@
 		1CBA62572CA1F0B6006253AE /* ThreeSmilesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeSmilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBA625B2CA1F0B6006253AE /* ThreeSmilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSmilesUITests.swift; sourceTree = "<group>"; };
 		1CBA625D2CA1F0B6006253AE /* ThreeSmilesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSmilesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1CBA626A2CA1F5C5006253AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CBA627A2CA5BE05006253AE /* CustomLoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginBtn.swift; sourceTree = "<group>"; };
 		1CBA627C2CA5C947006253AE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1CBA627F2CA5CC3F006253AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		1CBA62872CA5CCAE006253AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1CBA62892CA5CCBE006253AE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1CBA628A2CA5CCC0006253AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1CBA628B2CA5D69E006253AE /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
+		1CBA628F2CA714DB006253AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,16 +124,17 @@
 		1CBA62362CA1F0B3006253AE /* ThreeSmiles */ = {
 			isa = PBXGroup;
 			children = (
+				1CBA628E2CA70720006253AE /* Constant */,
 				1CBA62862CA5CCAE006253AE /* Localizable.strings */,
 				1CBA62782CA5B1FE006253AE /* Controller */,
 				1CBA62772CA5B1F7006253AE /* View */,
 				1CBA62762CA5B1ED006253AE /* Model */,
-				1CBA626A2CA1F5C5006253AE /* GoogleService-Info.plist */,
 				1CBA62372CA1F0B3006253AE /* AppDelegate.swift */,
 				1CBA62392CA1F0B3006253AE /* SceneDelegate.swift */,
 				1CBA62432CA1F0B6006253AE /* Assets.xcassets */,
 				1CBA62452CA1F0B6006253AE /* LaunchScreen.storyboard */,
 				1CBA62482CA1F0B6006253AE /* Info.plist */,
+				1CBA628F2CA714DB006253AE /* GoogleService-Info.plist */,
 				1CBA62402CA1F0B3006253AE /* ThreeSmiles.xcdatamodeld */,
 			);
 			path = ThreeSmiles;
@@ -181,7 +184,7 @@
 		1CBA62782CA5B1FE006253AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1CBA623B2CA1F0B3006253AE /* LoginViewController.swift */,
+				1CBA628D2CA5D6AB006253AE /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,22 @@
 				1CBA627C2CA5C947006253AE /* Color.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		1CBA628D2CA5D6AB006253AE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1CBA628B2CA5D69E006253AE /* LoginBottomSheetViewController.swift */,
+				1CBA623B2CA1F0B3006253AE /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1CBA628E2CA70720006253AE /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +336,7 @@
 			files = (
 				1CBA62882CA5CCAE006253AE /* Localizable.strings in Resources */,
 				1CBA62442CA1F0B6006253AE /* Assets.xcassets in Resources */,
-				1CBA626B2CA1F5C5006253AE /* GoogleService-Info.plist in Resources */,
+				1CBA62902CA714DB006253AE /* GoogleService-Info.plist in Resources */,
 				1CBA62472CA1F0B6006253AE /* Base in Resources */,
 				1CBA623F2CA1F0B3006253AE /* Base in Resources */,
 			);
@@ -344,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBA628C2CA5D69E006253AE /* LoginBottomSheetViewController.swift in Sources */,
 				1CBA623C2CA1F0B3006253AE /* LoginViewController.swift in Sources */,
 				1CBA627B2CA5BE05006253AE /* CustomLoginBtn.swift in Sources */,
 				1CBA62422CA1F0B3006253AE /* ThreeSmiles.xcdatamodeld in Sources */,

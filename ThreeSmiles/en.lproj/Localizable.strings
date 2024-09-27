@@ -9,4 +9,7 @@
 // Login page
 "demo" = "Demo";
 "login" = "Login";
+"signInWithEmail" = "Sign in with Email";
+"signInWithGoogle" = "Sign in with Google";
+"signInWithApple" = "Sign in with Apple";
 
