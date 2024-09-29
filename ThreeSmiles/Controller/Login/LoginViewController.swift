@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIAdaptivePresentationControllerDelegate, UISheetPresentationControllerDelegate {
     @IBOutlet weak var demoBtn: CustomLoginBtn!
     @IBOutlet weak var loginBtn: CustomLoginBtn!
 
@@ -24,10 +24,8 @@ class LoginViewController: UIViewController {
             self.presentAsBottomSheet(loginBottomSheetViewController, smallSize: 200)
         }
     }
-}
 
-extension UIViewController: UIAdaptivePresentationControllerDelegate, UISheetPresentationControllerDelegate {
-    func presentAsBottomSheet(_ viewController: UIViewController, smallSize: CGFloat = 100) {
+    private func presentAsBottomSheet(_ viewController: UIViewController, smallSize: CGFloat = 100) {
         viewController.isModalInPresentation = false
 
         if let sheet = viewController.sheetPresentationController {
@@ -53,4 +51,3 @@ extension UIViewController: UIAdaptivePresentationControllerDelegate, UISheetPre
         self.present(viewController, animated: true)
     }
 }
-

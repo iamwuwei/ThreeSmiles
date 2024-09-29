@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9UX-dy-oQO">
-                                <rect key="frame" x="20" y="403" width="374" height="90"/>
+                                <rect key="frame" x="20" y="408.5" width="374" height="79"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1t0-g3-COW" customClass="CustomLoginBtn" customModule="ThreeSmiles" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Demo"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKj-HX-M0m" userLabel="LoginBtn" customClass="CustomLoginBtn" customModule="ThreeSmiles" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
@@ -53,6 +53,22 @@
             </objects>
             <point key="canvasLocation" x="-2191" y="-161"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="vhG-JS-Xq4">
+            <objects>
+                <viewController id="G6L-a1-xDL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bO3-4i-02j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vVF-qK-Wds"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fXL-86-Sbn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aI8-UZ-xtp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1281.1594202898552" y="634.15178571428567"/>
+        </scene>
         <!--Login Bottom Sheet View Controller-->
         <scene sceneID="Xo0-fX-vd4">
             <objects>
@@ -62,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UXP-tm-1Bh">
-                                <rect key="frame" x="20" y="76" width="374" height="140"/>
+                                <rect key="frame" x="20" y="76" width="374" height="134.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0J-Yz-dKM">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -71,6 +87,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Google"/>
+                                                <connections>
+                                                    <action selector="loginWithGoogleBtnDidTap:" destination="oJl-Gg-blx" eventType="touchUpInside" id="C37-NU-9St"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7In-W1-UQB">
                                                 <rect key="frame" x="15" y="5" width="30" height="30"/>
@@ -119,7 +138,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t58-MU-uqn" customClass="CustomLoginBtn" customModule="ThreeSmiles" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="100" width="374" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Email"/>
                                     </button>
@@ -164,24 +183,25 @@
             </objects>
             <point key="canvasLocation" x="-1132" y="-161"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="u0T-TG-qIe">
+            <objects>
+                <tabBarController storyboardIdentifier="main" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z8E-1y-z4Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wiq-Py-gwL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="G6L-a1-xDL" kind="relationship" relationship="viewControllers" id="r8K-Dm-NLM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5k-AS-w4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2191.304347826087" y="634.15178571428567"/>
+        </scene>
     </scenes>
-    <designables>
-        <designable name="1t0-g3-COW">
-            <size key="intrinsicContentSize" width="69.5" height="34.5"/>
-        </designable>
-        <designable name="ZZK-qw-fug">
-            <size key="intrinsicContentSize" width="79" height="34.5"/>
-        </designable>
-        <designable name="gKj-HX-M0m">
-            <size key="intrinsicContentSize" width="66" height="34.5"/>
-        </designable>
-        <designable name="hwx-AW-64P">
-            <size key="intrinsicContentSize" width="68.5" height="34.5"/>
-        </designable>
-        <designable name="t58-MU-uqn">
-            <size key="intrinsicContentSize" width="65" height="34.5"/>
-        </designable>
-    </designables>
     <resources>
         <image name="apple-logo" width="192.5" height="144.5"/>
         <image name="google-logo" width="144.5" height="144.5"/>

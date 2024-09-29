@@ -24,6 +24,10 @@
 		1CBA62882CA5CCAE006253AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA62862CA5CCAE006253AE /* Localizable.strings */; };
 		1CBA628C2CA5D69E006253AE /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA628B2CA5D69E006253AE /* LoginBottomSheetViewController.swift */; };
 		1CBA62902CA714DB006253AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CBA628F2CA714DB006253AE /* GoogleService-Info.plist */; };
+		1CCBCEFA2CA95A84000C778A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCBCEF92CA95A84000C778A /* AuthService.swift */; };
+		1CCBCEFD2CA95B04000C778A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCBCEFC2CA95B04000C778A /* GoogleSignIn */; };
+		1CCBCEFF2CA95B04000C778A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCBCEFE2CA95B04000C778A /* GoogleSignInSwift */; };
+		1CCBCF012CA95B2D000C778A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCBCF002CA95B2D000C778A /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,7 @@
 		1CBA628A2CA5CCC0006253AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1CBA628B2CA5D69E006253AE /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
 		1CBA628F2CA714DB006253AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1CCBCEF92CA95A84000C778A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +84,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CBA62732CA1F7F6006253AE /* FirebaseAnalytics in Frameworks */,
+				1CCBCF012CA95B2D000C778A /* FirebaseAuth in Frameworks */,
 				1CBA62752CA1F7FA006253AE /* FirebaseCrashlytics in Frameworks */,
+				1CCBCEFD2CA95B04000C778A /* GoogleSignIn in Frameworks */,
+				1CCBCEFF2CA95B04000C778A /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +132,7 @@
 		1CBA62362CA1F0B3006253AE /* ThreeSmiles */ = {
 			isa = PBXGroup;
 			children = (
+				1CCBCEF82CA95A73000C778A /* Service */,
 				1CBA628E2CA70720006253AE /* Constant */,
 				1CBA62862CA5CCAE006253AE /* Localizable.strings */,
 				1CBA62782CA5B1FE006253AE /* Controller */,
@@ -221,6 +230,14 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		1CCBCEF82CA95A73000C778A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1CCBCEF92CA95A84000C778A /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +257,9 @@
 			packageProductDependencies = (
 				1CBA62722CA1F7F6006253AE /* FirebaseAnalytics */,
 				1CBA62742CA1F7FA006253AE /* FirebaseCrashlytics */,
+				1CCBCEFC2CA95B04000C778A /* GoogleSignIn */,
+				1CCBCEFE2CA95B04000C778A /* GoogleSignInSwift */,
+				1CCBCF002CA95B2D000C778A /* FirebaseAuth */,
 			);
 			productName = ThreeSmiles;
 			productReference = 1CBA62342CA1F0B3006253AE /* ThreeSmiles.app */;
@@ -289,7 +309,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					1CBA62332CA1F0B3006253AE = {
 						CreatedOnToolsVersion = 15.4;
@@ -317,6 +337,7 @@
 			mainGroup = 1CBA622B2CA1F0B3006253AE;
 			packageReferences = (
 				1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1CCBCEFB2CA95AF7000C778A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 1CBA62352CA1F0B3006253AE /* Products */;
 			projectDirPath = "";
@@ -370,6 +391,7 @@
 				1CBA62382CA1F0B3006253AE /* AppDelegate.swift in Sources */,
 				1CBA623A2CA1F0B3006253AE /* SceneDelegate.swift in Sources */,
 				1CBA627D2CA5C948006253AE /* Color.swift in Sources */,
+				1CCBCEFA2CA95A84000C778A /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,8 +597,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wwei.ThreeSmiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -603,8 +624,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,7 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wwei.ThreeSmiles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -621,7 +641,6 @@
 		1CBA62652CA1F0B6006253AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -641,7 +660,6 @@
 		1CBA62662CA1F0B6006253AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -661,7 +679,6 @@
 		1CBA62682CA1F0B6006253AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 29PV5TNJZ7;
@@ -679,7 +696,6 @@
 		1CBA62692CA1F0B6006253AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 29PV5TNJZ7;
@@ -744,6 +760,14 @@
 				minimumVersion = 11.2.0;
 			};
 		};
+		1CCBCEFB2CA95AF7000C778A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -756,6 +780,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		1CCBCEFC2CA95B04000C778A /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCBCEFB2CA95AF7000C778A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		1CCBCEFE2CA95B04000C778A /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCBCEFB2CA95AF7000C778A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		1CCBCF002CA95B2D000C778A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CBA626C2CA1F698006253AE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 
